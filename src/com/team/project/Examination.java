@@ -4,19 +4,19 @@ public class Examination {
 
 	public static void main(String[] args) {
 		Examination obj = new Examination();
-		obj.details();
-		obj.question();
+		obj.stuDetails();
+		obj.examQuestions();
 	}
 
 	// login method
-	public void details() {
+	public void stuDetails() {
 		System.out.println("login");
 	}
 
 	// -------------------------------------
 
 	// question method
-	public void question() {
+	public void examQuestions() {
 		System.out.println("question");
 
 	}
