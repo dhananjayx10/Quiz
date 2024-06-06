@@ -1,10 +1,13 @@
 package com.team.project;
 import java.sql.SQLException;
 import java.util.Scanner;
+
+import com.que.s.Quiz;
 public class Examination extends ConnectionTest {
-// login method
+ 
 	public static void main(String[] args)throws SQLException {
 		Examination examination=new Examination();
+		//Student Details
 	    System.out.println("What would you like to do?");
 	    System.out.println("1. Display Personal Details");
 	    System.out.println("2. Dispaly login details");
@@ -31,6 +34,10 @@ public class Examination extends ConnectionTest {
 					System.out.print("Thank You!!!!");
 				}
 				}
+		   //Questions 
+		   Quiz quiz = new Quiz();
+	       quiz.questions();
+	       quiz.result();
 		}
 public void stuDetails() {
 		System.out.println("login");
@@ -70,10 +77,5 @@ public static void login_Details(){
 			System.out.println("Enter Password :");
 			String Password=sc.next();
 		}
-	// -------------------------------------
-// question method
-	public void examQuestions() {
-		System.out.println("question");
-
-	}
+	 
 }
