@@ -1,0 +1,29 @@
+CREATE DATABASE exam_database;  -- Replace with your desired database name
+
+USE exam_database;  -- Use the created database
+
+CREATE TABLE student (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  first_name VARCHAR(255) NOT NULL,
+  last_name VARCHAR(255) NOT NULL,
+  mobile_number BIGINT,  -- Assuming mobile number is a long integer
+  email VARCHAR(255) UNIQUE,  -- Unique email for each student
+  username VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE quiz (  -- Assuming you have a separate table for quizzes
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  /* Add columns for quiz details like name, description, etc. */
+  student_id INT,  -- Foreign key referencing student.id
+  FOREIGN KEY (student_id) REFERENCES student(id)
+);
+
+CREATE TABLE quiz_result (  -- Assuming you have a separate table for quiz results
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  quiz_id INT,  -- Foreign key referencing quiz.id
+  student_id INT,  -- Foreign key referencing student.id
+  score INT,  -- Score obtained by the student
+  FOREIGN KEY (quiz_id) REFERENCES quiz(id),
+  FOREIGN KEY (student_id) REFERENCES student(id)
+);
