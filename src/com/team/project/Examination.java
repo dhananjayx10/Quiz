@@ -1,31 +1,6 @@
 package com.team.project;
 import java.sql.SQLException;
 import java.util.Scanner;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-public class Examination {
-
-	public static void main(String[] args) {
-		Examination obj = new Examination();
-		//stuDetails();
-		//examQuestions();
-	}
-
-	// login 
-        //stuDetails() {
-		 
-	}
-
-	// -------------------------------------
-
-	// question  
-        //examQuestions() {
-		 
-	}
-}
-=======
-import com.que.s.Quiz;
 public class Examination extends ConnectionTest {
  
 	public static void main(String[] args)throws SQLException {
@@ -102,6 +77,3 @@ public static void login_Details(){
 		}
 	 
 }
->>>>>>> f1
-=======
->>>>>>> 5a2130e5fb57a0dbf6ba89a1a4cd31dd36c39634
